@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f5fa271c-10b7-43d4-89f8-684d8d227c75" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AsteroidBelt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Connectable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/QuestGoal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9674024A-B0E7-4D27-BBE9-EAA30DAB34D1/4a/e06c8c21/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/AtmosphereDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/ForceField.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightBlinker.cs" />
+        <option value="$PROJECT_DIR$/Assets/PrimitiveCapsule.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GravityApplier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Archive/StageScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Archive/RocketController.cs" />
+        <option value="$PROJECT_DIR$/Assets/PrimitiveRocketController.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChapterSelect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightBlinker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/ResourceDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MothershipResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/QuestGoal.cs" />
+        <option value="$PROJECT_DIR$/Assets/LockRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlanetScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Buildable.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShopButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AttractorField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BuildingPlacer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AsteroidBelt.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SliderDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/SeparateButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/DockButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/UndockButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ForceField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CustomInspectorList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResourceCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/QuestPage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScannablePlanet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buildable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Grabber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BoosterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MothershipDocking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScannerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CapsuleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HangarScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/SkinChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/SkinButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prefabs/Asteroids/Asteroid.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShipShopDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ShowHideButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LanderController.cs" />
+        <option value="$PROJECT_DIR$/Assets/CreditsRotater.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kSd3gy4Q49t34Vz4o9BfihqWh9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/devbuild/build3\MoonShot.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\erdos\Desktop\devbuild\build3" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5fa271c-10b7-43d4-89f8-684d8d227c75" name="Default Changelist" comment="" />
+      <created>1605697731680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605697731680</updated>
+      <workItem from="1605697735265" duration="633000" />
+      <workItem from="1605699723372" duration="7985000" />
+      <workItem from="1605712852714" duration="18582000" />
+      <workItem from="1605741951069" duration="788000" />
+      <workItem from="1605777127612" duration="9891000" />
+      <workItem from="1605787285444" duration="684000" />
+      <workItem from="1605795497892" duration="10369000" />
+      <workItem from="1605893963118" duration="3789000" />
+      <workItem from="1606056120510" duration="4557000" />
+      <workItem from="1606076819031" duration="5371000" />
+      <workItem from="1606130463040" duration="8402000" />
+      <workItem from="1606148260035" duration="12253000" />
+      <workItem from="1606219332913" duration="29057000" />
+      <workItem from="1606300832407" duration="10913000" />
+      <workItem from="1606323139512" duration="8051000" />
+      <workItem from="1606389975986" duration="19619000" />
+      <workItem from="1606421639596" duration="3761000" />
+      <workItem from="1606481235283" duration="19085000" />
+      <workItem from="1606559785311" duration="24676000" />
+      <workItem from="1606601276356" duration="2466000" />
+      <workItem from="1606647669313" duration="22203000" />
+      <workItem from="1606727217804" duration="19201000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="170" width="998" height="822" key="SettingsEditor" timestamp="1606229953276">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@0.0.1920.1050" timestamp="1606229953276" />
+    <state x="2032" y="84" width="998" height="822" key="SettingsEditor/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@1920.30.1680.1020" timestamp="1605730174204" />
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1605699780602" />
+    <state x="1933" y="11" width="1571" height="1037" maximized="true" key="dock-window-1" timestamp="1606754320563">
+      <screen x="1920" y="30" width="1680" height="1020" />
+    </state>
+    <state x="272" y="-10" width="914" height="1137" maximized="true" key="dock-window-1/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@-1080.0.1080.1890" timestamp="1606158645697" />
+    <state x="1933" y="11" width="1571" height="1037" maximized="true" key="dock-window-1/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@0.0.1920.1050" timestamp="1606747231342" />
+    <state x="1933" y="11" width="1571" height="1037" maximized="true" key="dock-window-1/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@1920.30.1680.1020" timestamp="1606754320563" />
+    <state x="0" y="0" width="1939" height="1068" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1605742413049" />
+    <state x="-8" y="0" width="1352" height="1007" key="dock-window-2" timestamp="1606585247939">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1920" y="30" width="1696" height="1037" key="dock-window-2/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@0.0.1920.1050" timestamp="1606252053987" />
+    <state x="-8" y="0" width="1352" height="1007" key="dock-window-2/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@1920.30.1680.1020" timestamp="1606585247939" />
+    <state x="1933" y="14" width="1592" height="1037" maximized="true" key="dock-window-3" timestamp="1606588267788">
+      <screen x="1920" y="30" width="1680" height="1020" />
+    </state>
+    <state x="1933" y="14" width="1592" height="1037" maximized="true" key="dock-window-3/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@0.0.1920.1050" timestamp="1606588267788" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1606759509328">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-730" y="409" width="672" height="1221" key="search.everywhere.popup/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@-1080.0.1080.1890" timestamp="1606431131469" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@0.0.1920.1050" timestamp="1606759509328" />
+    <state x="2465" y="251" width="672" height="659" key="search.everywhere.popup/0.0.1920.1050/1920.30.1680.1020/-1080.0.1080.1890@1920.30.1680.1020" timestamp="1606729100149" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1605698053513" />
+  </component>
+</project>

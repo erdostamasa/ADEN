@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\erdos\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\erdos\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_MoonShot.1474115816.00" t="ExcludeRecursive" />
+    <e p="M:\OneDrive - Eotvos Lorand Tudomanyegyetem\unity\MoonShot" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="2D Space Kit" t="Include">
+          <e p="Background Elements" t="Include">
+            <e p="Planets" t="Include">
+              <e p="Planet Masks" t="Include">
+                <e p="Note.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Stars" t="Include">
+              <e p="Recolor Us!.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Backgrounds" t="Include">
+            <e p="Background Tip.txt" t="Include" />
+            <e p="Fantasy Purple 2048" t="Include">
+              <e p="Note.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Particles (Sprites)" t="Include">
+            <e p="Note on Flares.txt" t="Include" />
+          </e>
+          <e p="Readme.txt" t="Include" />
+          <e p="Ships and Stations" t="Include">
+            <e p="Rendering Tip.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Editor" t="Include">
+          <e p="CustomInspectorList.cs" t="Include" />
+          <e p="CustomTagEditor.cs" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="PrefabSpawner2D" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Data" t="Include">
+                <e p="SaveData.txt" t="Include" />
+              </e>
+              <e p="Helpers" t="Include">
+                <e p="JsonHelper.cs" t="Include" />
+                <e p="MouseHelper.cs" t="Include" />
+              </e>
+              <e p="PrefabSelectionWindow.cs" t="Include" />
+              <e p="PrefabSpawner2DEditor.cs" t="Include" />
+              <e p="ProportionValue.cs" t="Include" />
+              <e p="SaveSlotsWindow.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Prefabs" t="Include">
+          <e p="Asteroids" t="Include">
+            <e p="Asteroid.cs" t="Include" />
+          </e>
+        </e>
+        <e p="RandomFromDistributions" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="RandomFromDistribution.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Rope" t="Include">
+          <e p="Rope.cs" t="Include" />
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="Archive" t="Include">
+            <e p="GravitySimulation.cs" t="Include" />
+            <e p="RealGravity.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Archive" t="Include">
+            <e p="RocketController.cs" t="Include" />
+            <e p="StageScript.cs" t="Include" />
+          </e>
+          <e p="AsteroidBelt.cs" t="Include" />
+          <e p="AtmosphereDisplay.cs" t="Include" />
+          <e p="AttractorField.cs" t="Include" />
+          <e p="AudioManager.cs" t="Include" />
+          <e p="BackgroundPlanet.cs" t="Include" />
+          <e p="BoosterController.cs" t="Include" />
+          <e p="Buildable.cs" t="Include" />
+          <e p="BuildingController.cs" t="Include" />
+          <e p="BuildingPlacer.cs" t="Include" />
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="CapsuleController.cs" t="Include" />
+          <e p="ChapterSelect.cs" t="Include" />
+          <e p="Connectable.cs" t="Include" />
+          <e p="CreditsRotater.cs" t="Include" />
+          <e p="CustomTag.cs" t="Include" />
+          <e p="DockButton.cs" t="Include" />
+          <e p="ForceField.cs" t="Include" />
+          <e p="GameMaster.cs" t="Include" />
+          <e p="Grabber.cs" t="Include" />
+          <e p="GravityApplier.cs" t="Include" />
+          <e p="HangarScreen.cs" t="Include" />
+          <e p="HaulerController.cs" t="Include" />
+          <e p="HealthManager.cs" t="Include" />
+          <e p="LanderController.cs" t="Include" />
+          <e p="LightBlinker.cs" t="Include" />
+          <e p="LockRotation.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MinimapCamera.cs" t="Include" />
+          <e p="MinimapLineRenderer.cs" t="Include" />
+          <e p="Mothership.cs" t="Include" />
+          <e p="MothershipDocking.cs" t="Include" />
+          <e p="MothershipResources.cs" t="Include" />
+          <e p="NavigationHUD.cs" t="Include" />
+          <e p="PauseMenu.cs" t="Include" />
+          <e p="PlanetScript.cs" t="Include" />
+          <e p="PrimitiveCapsule.cs" t="Include" />
+          <e p="PrimitiveRocketController.cs" t="Include" />
+          <e p="Quest.cs" t="Include" />
+          <e p="QuestGoal.cs" t="Include" />
+          <e p="QuestManager.cs" t="Include" />
+          <e p="QuestPage.cs" t="Include" />
+          <e p="ResourceCollector.cs" t="Include" />
+          <e p="ResourceDisplay.cs" t="Include" />
+          <e p="RestartGame.cs" t="Include" />
+          <e p="ScannablePlanet.cs" t="Include" />
+          <e p="ScannerController.cs" t="Include" />
+          <e p="SelectorScript.cs" t="Include" />
+          <e p="SeparateButton.cs" t="Include" />
+          <e p="ShipShopDisplay.cs" t="Include" />
+          <e p="ShopButton.cs" t="Include" />
+          <e p="ShowHideButton.cs" t="Include" />
+          <e p="SkinButton.cs" t="Include" />
+          <e p="SkinChanger.cs" t="Include" />
+          <e p="SliderDisplay.cs" t="Include" />
+          <e p="StarScript.cs" t="Include" />
+          <e p="ThrusterScript.cs" t="Include" />
+          <e p="TutorialManager.cs" t="Include" />
+          <e p="UIKeyListener.cs" t="Include" />
+          <e p="UndockButton.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="MoonShot.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
