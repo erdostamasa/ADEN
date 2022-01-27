@@ -29,7 +29,8 @@ public class ResourceCollector : MonoBehaviour {
                 Destroy(other.gameObject);
                 ship.ice += amount;
                 if (QuestManager.instance.currentQuest.goal.goalType == GoalType.CollectIce){
-                    QuestManager.instance.currentQuest.goal.currentAmount = (int)ship.ice;    
+                    //QuestManager.instance.currentQuest.goal.currentAmount = (int)ship.ice;
+                    QuestManager.instance.currentQuest.goal.currentAmount += amount;
                 }
                 
             }else if (ct.HasTag("iron")){
@@ -38,7 +39,8 @@ public class ResourceCollector : MonoBehaviour {
                 Destroy(other.gameObject);
                 ship.iron += amount;
                 if (QuestManager.instance.currentQuest.goal.goalType == GoalType.CollectIron){
-                    QuestManager.instance.currentQuest.goal.currentAmount = (int) ship.iron;
+//                    QuestManager.instance.currentQuest.goal.currentAmount = (int) ship.iron;
+                    QuestManager.instance.currentQuest.goal.currentAmount += amount;
                 }
             }
         }

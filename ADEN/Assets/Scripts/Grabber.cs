@@ -28,7 +28,7 @@ public class Grabber : MonoBehaviour {
     private bool grabberExtended = false;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.G) && !capsule.connected){
+        if (Input.GetKeyDown(KeyCode.G)/* && !capsule.connected*/){
 
             if (hasGrabbed){
                 Release();

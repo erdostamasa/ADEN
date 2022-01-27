@@ -62,7 +62,7 @@ public class CapsuleController : MonoBehaviour {
     private bool usingSliders = false;
 
     private void Start() {
-        if (GameMaster.Instance.mainPowerSlider != null && GameMaster.Instance.sidePowerSlider != null){
+        if (GameMaster.Instance.mainPowerSlider != null && GameMaster.Instance.sidePowerSlider != null) {
             mainSlider = GameMaster.Instance.mainPowerSlider;
             posSlider = GameMaster.Instance.sidePowerSlider;
             usingSliders = true;
@@ -76,7 +76,7 @@ public class CapsuleController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (possibleConnectPoints.Count > 0){
+        if (possibleConnectPoints.Count > 0) {
             closestConnectTransform = GetClosest(possibleConnectPoints);
 
 
@@ -86,22 +86,23 @@ public class CapsuleController : MonoBehaviour {
             float deltaAngle = Mathf.Abs(Mathf.DeltaAngle(thisAngle, thatAngle));
 
             //Control visual display of connect points
-            if (!connected && canConnect){
+            if (!connected && canConnect) {
                 if (Vector2.Distance(connectPoint.transform.position, closestConnectTransform.position) >
-                    displayConnectPointDistance){
-                    if (connectPoint.GetComponent<Light2D>().enabled){
+                    displayConnectPointDistance) {
+                    if (connectPoint.GetComponent<Light2D>().enabled) {
                         connectPoint.GetComponent<Light2D>().enabled = false;
                     }
 
-                    if (closestConnectTransform.GetComponent<Light2D>().enabled){
+                    if (closestConnectTransform.GetComponent<Light2D>().enabled) {
                         closestConnectTransform.GetComponent<Light2D>().enabled = false;
                     }
-                } else{
-                    if (!connectPoint.GetComponent<Light2D>().enabled){
+                }
+                else {
+                    if (!connectPoint.GetComponent<Light2D>().enabled) {
                         connectPoint.GetComponent<Light2D>().enabled = true;
                     }
 
-                    if (!closestConnectTransform.GetComponent<Light2D>().enabled){
+                    if (!closestConnectTransform.GetComponent<Light2D>().enabled) {
                         closestConnectTransform.GetComponent<Light2D>().enabled = true;
                     }
                 }
@@ -109,8 +110,8 @@ public class CapsuleController : MonoBehaviour {
 
             //connect if conditions are met
             if (canConnect && Vector2.Distance(connectPoint.transform.position, closestConnectTransform.position) <
-                0.6f && deltaAngle < 60f){
-                if (!isConnected){
+                0.6f && deltaAngle < 60f) {
+                if (!isConnected) {
                     Connect();
                     connectPoint.GetComponent<Light2D>().enabled = false;
                     closestConnectTransform.GetComponent<Light2D>().enabled = false;
@@ -119,12 +120,12 @@ public class CapsuleController : MonoBehaviour {
         }
 
 
-        if (isConnected){
-            if (connected.transform.localPosition != connectedScript.offset){
+        if (isConnected) {
+            if (connected.transform.localPosition != connectedScript.offset) {
                 connected.transform.localPosition = connectedScript.offset;
             }
 
-            if (connected.transform.localRotation != quaternion.identity){
+            if (connected.transform.localRotation != quaternion.identity) {
                 connected.transform.localRotation = quaternion.identity;
             }
 
@@ -132,50 +133,53 @@ public class CapsuleController : MonoBehaviour {
             inputs["A"] = Input.GetKey(KeyCode.A);
             inputs["S"] = Input.GetKey(KeyCode.S);
             inputs["D"] = Input.GetKey(KeyCode.D);
-            inputs["RIGHT"] = Input.GetKey(KeyCode.RightArrow);
-            inputs["LEFT"] = Input.GetKey(KeyCode.LeftArrow);
+            inputs["RIGHT"] = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.E);
+            inputs["LEFT"] = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.Q);
             inputs["UP"] = Input.GetKey(KeyCode.UpArrow);
             inputs["DOWN"] = Input.GetKey(KeyCode.DownArrow);
 
             connectedScript.Control(inputs);
-        } else{
-            if (Input.GetKey(KeyCode.W)){
+        }
+        else {
+            //main engine
+            if (Input.GetKey(KeyCode.W)) {
                 mts.Fire(mainSpeed);
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow)){
+            //strafe left
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
                 frr.Fire(thrusterPower / 1.75f);
                 brr.Fire(thrusterPower);
             }
 
-            if (Input.GetKey(KeyCode.RightArrow)){
+            //strafe right
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
                 fll.Fire(thrusterPower / 1.75f);
                 bll.Fire(thrusterPower);
             }
 
-            if (Input.GetKey(KeyCode.UpArrow)){
+            //forward thruster
+            if (Input.GetKey(KeyCode.UpArrow)) {
                 bld.Fire(thrusterPower);
                 brd.Fire(thrusterPower);
             }
 
-            if (Input.GetKey(KeyCode.DownArrow)){
+            //backwards truster
+            if (Input.GetKey(KeyCode.DownArrow) ||Input.GetKey(KeyCode.S)) {
                 flu.Fire(thrusterPower);
                 fru.Fire(thrusterPower);
             }
 
-            if (Input.GetKey(KeyCode.A)){
+            //turn left
+            if (Input.GetKey(KeyCode.Q)) {
                 frr.Fire(thrusterPower);
                 bll.Fire(thrusterPower);
             }
 
-            if (Input.GetKey(KeyCode.D)){
+            //turn right
+            if (Input.GetKey(KeyCode.E)) {
                 fll.Fire(thrusterPower);
                 brr.Fire(thrusterPower);
-            }
-
-            if (Input.GetKey(KeyCode.S)){
-                flu.Fire(thrusterPower);
-                fru.Fire(thrusterPower);
             }
         }
     }
@@ -184,10 +188,10 @@ public class CapsuleController : MonoBehaviour {
         Transform closest = null;
         float closestDistSqr = Mathf.Infinity;
         Vector2 currentPosition = transform.position;
-        foreach (GameObject obj in objects){
-            Vector2 directionToTarget = (Vector2) obj.transform.position - currentPosition;
+        foreach (GameObject obj in objects) {
+            Vector2 directionToTarget = (Vector2)obj.transform.position - currentPosition;
             float sqrDist = directionToTarget.sqrMagnitude;
-            if (sqrDist < closestDistSqr){
+            if (sqrDist < closestDistSqr) {
                 closest = obj.transform;
                 closestDistSqr = sqrDist;
             }
@@ -197,21 +201,21 @@ public class CapsuleController : MonoBehaviour {
     }
 
     void Update() {
-        if (usingSliders){
+        if (usingSliders) {
             mainSpeed = mainSlider.value;
             thrusterPower = posSlider.value;
         }
 
         UpdateConnectPoints();
 
-        if (Input.GetKeyDown(KeyCode.T)){
+        if (Input.GetKeyDown(KeyCode.T)) {
             Disconnect();
         }
     }
 
 
     public void Connect() {
-        grabber.RetractGrabber();
+        //grabber.RetractGrabber();
 
         connected = closestConnectTransform.parent.gameObject;
 

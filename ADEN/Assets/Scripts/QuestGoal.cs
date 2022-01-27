@@ -7,8 +7,8 @@ public class QuestGoal {
     public GoalType goalType;
 
     public List<GameObject> targetPlanets;
-    public int requiredAmount;
-    public int currentAmount;
+    public float requiredAmount;
+    public float currentAmount;
 
     public bool IsQuestComplete() {
         return (currentAmount >= requiredAmount);

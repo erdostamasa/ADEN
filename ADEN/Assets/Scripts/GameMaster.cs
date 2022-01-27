@@ -7,25 +7,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour {
-    
     private static GameMaster _instance;
-    public static GameMaster Instance { get { return _instance; } }
+
+    public static GameMaster Instance {
+        get { return _instance; }
+    }
 
     public Slider mainPowerSlider;
     public Slider sidePowerSlider;
-    
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
+
+    private void Awake() {
+        if (_instance != null && _instance != this) {
             Destroy(this.gameObject);
-        } else {
+        }
+        else {
             _instance = this;
         }
     }
 
     public bool dontspawn;
-    
+
     public GameObject mothership;
     public Transform spawnPoint;
     public GameObject capsulePrefab;
@@ -39,31 +40,32 @@ public class GameMaster : MonoBehaviour {
     public GameObject GUI;
 
     private void Start() {
-        if (!dontspawn){
-            Respawn();    
+        if (!dontspawn) {
+            Respawn();
         }
-        
+
+        Application.targetFrameRate = 60;
     }
 
     private void Update() {
-        if (currentCapsule != null){
+        if (currentCapsule != null) {
             healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
-            if (currentCapsule.GetComponent<HealthManager>().health <= 0){
+            if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
                 DestroyCapsule();
-            }    
+            }
         }
     }
 
-    
+
     public void NextSkin() {
         currentCapsule.GetComponent<SkinChanger>().NextSkin();
     }
 
-    
+
     public void DisconnectCapsule() {
         currentCapsule.GetComponent<CapsuleController>().Disconnect();
     }
-    
+
     public void Respawn() {
         currentCapsule = Instantiate(capsulePrefab, spawnPoint.position, spawnPoint.rotation);
         mainCam.GetComponent<CameraFollow>().target = currentCapsule.transform;
@@ -78,11 +80,11 @@ public class GameMaster : MonoBehaviour {
     public void DamageCapsule(int dmg) {
         currentCapsule.GetComponent<HealthManager>().Damage(dmg, 2);
         healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
-        if (currentCapsule.GetComponent<HealthManager>().health <= 0){
+        if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
             DestroyCapsule();
         }
     }
-    
+
     public void DestroyCapsule() {
         AudioManager.Instance.PlayExplosion(currentCapsule.transform.position, 1f);
         Destroy(currentCapsule);
@@ -96,5 +98,4 @@ public class GameMaster : MonoBehaviour {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
 }

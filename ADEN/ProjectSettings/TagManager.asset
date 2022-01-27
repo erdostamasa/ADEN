@@ -38,7 +38,7 @@ TagManager:
   - player
   - worldmap
   - asteroid
-  - 
+  - CollideWithAsteroidsOnly
   - 
   - 
   - 

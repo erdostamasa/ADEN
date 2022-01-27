@@ -147,9 +147,9 @@ public class PlanetScript : MonoBehaviour {
             float distance = Vector2.Distance(this.transform.position, attracted.transform.position);
             float attractedHeight = distance - hitbox.radius * scale;
             float t = attractedHeight / (gravityRadius.radius * scale - hitbox.radius * scale);
-            currentDrag = Mathf.Lerp(0, planetDrag, airResistanceCurve.Evaluate(t));
+            //currentDrag = Mathf.Lerp(0, planetDrag, airResistanceCurve.Evaluate(t));
 
-            gravScript.drag = currentDrag;
+            gravScript.drag = Mathf.Lerp(0, planetDrag, airResistanceCurve.Evaluate(t));
             gravScript.angularDrag = Mathf.Lerp(0, planetDrag / 2f, airResistanceCurve.Evaluate(t));
         }
     }

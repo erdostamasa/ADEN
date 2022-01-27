@@ -85,7 +85,7 @@ public class MothershipDocking : MonoBehaviour {
         docked = true;
         canDock = false;
         player.GetComponent<CapsuleController>().enabled = false;
-        player.GetComponent<SelectorScript>().enabled = false;
+        //player.GetComponent<SelectorScript>().enabled = false;
         player.GetComponent<GravityApplier>().enabled = false;
         player.GetComponent<BuildingPlacer>().enabled = false;
         player.GetComponent<HealthManager>().health = 100;
@@ -102,7 +102,7 @@ public class MothershipDocking : MonoBehaviour {
         docked = false;
         canDock = true;
         player.GetComponent<CapsuleController>().enabled = true;
-        player.GetComponent<SelectorScript>().enabled = true;
+        //player.GetComponent<SelectorScript>().enabled = true;
         player.GetComponent<GravityApplier>().enabled = true;
         player.GetComponent<BuildingPlacer>().enabled = true;
         player.transform.Find("HUD").gameObject.SetActive(true);

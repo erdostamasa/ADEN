@@ -8,6 +8,8 @@ public class AtmosphereDisplay : MonoBehaviour {
     public TextMeshProUGUI counter;
     public GameMaster gameMaster;
 
+    [SerializeField] List<GameObject> visuals;
+
     void Update() {
         List<PlanetScript> planets = gameMaster.currentCapsule.GetComponent<GravityApplier>().planets;
         PlanetScript planet = null;
@@ -16,9 +18,15 @@ public class AtmosphereDisplay : MonoBehaviour {
         }
 
         if (planet != null){
-            counter.text = Math.Round(planet.currentDrag, 4, MidpointRounding.AwayFromZero).ToString();
+            counter.text = Math.Round(gameMaster.currentCapsule.GetComponent<GravityApplier>().drag*5, 2, MidpointRounding.AwayFromZero).ToString();
+            foreach (GameObject visual in visuals) {
+                visual.SetActive(true);
+            }
         } else{
-            counter.text = "NONE";
+            //counter.text = "NONE";
+            foreach (GameObject visual in visuals) {
+                visual.SetActive(false);
+            }
         }
     }
 }

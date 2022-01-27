@@ -12,7 +12,7 @@ public class ResourceDisplay : MonoBehaviour {
     public MothershipResources ship;
 
     private void Update() {
-        metal.text = Math.Round(ship.iron, 2, MidpointRounding.ToEven).ToString();
-        water.text = Math.Round(ship.ice, 2, MidpointRounding.ToEven).ToString();
+        metal.text = Math.Round(ship.iron, 1, MidpointRounding.ToEven).ToString();
+        water.text = Math.Round(ship.ice, 1, MidpointRounding.ToEven).ToString();
     }
 }

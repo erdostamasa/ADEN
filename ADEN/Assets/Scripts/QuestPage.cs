@@ -11,12 +11,13 @@ public class QuestPage : MonoBehaviour {
     public GameObject targetPrefab;
 
     private void Update() {
-        if (currentQuest == null){
+        if (currentQuest == null) {
             title.text = "";
             description.text = "";
-        } else{
+        }
+        else {
             DisplayQuest(currentQuest);
-            
+
             /*if (currentQuest.goal.goalType == GoalType.ScanPlanet){
                 DisplayScanTarget();
             }else if (currentQuest.goal.goalType == GoalType.BuildScanningPost){
@@ -26,59 +27,59 @@ public class QuestPage : MonoBehaviour {
     }
 
     private List<GameObject> buildTargets;
+
     private void DisplayBuildTargets() {
-        if (buildTargets == null){
+        if (buildTargets == null) {
             buildTargets = new List<GameObject>();
-            foreach (GameObject planet in currentQuest.goal.targetPlanets){
+            foreach (GameObject planet in currentQuest.goal.targetPlanets) {
                 buildTargets.Add(Instantiate(targetPrefab));
             }
         }
-        
+
         GameObject remove = null;
         GameObject remove2 = null;
-        for (int i = 0; i < buildTargets.Count; i++){
+        for (int i = 0; i < buildTargets.Count; i++) {
             Vector3 planetPosition = currentQuest.goal.targetPlanets[i].transform.position;
 
             buildTargets[i].transform.position = new Vector3(planetPosition.x, planetPosition.y, -10);
 
-            if (currentQuest.goal.targetPlanets[i].GetComponent<Buildable>().completed){
+            if (currentQuest.goal.targetPlanets[i].GetComponent<Buildable>().completed) {
                 remove = currentQuest.goal.targetPlanets[i];
                 remove2 = buildTargets[i];
             }
         }
 
-        if (remove != null){
+        if (remove != null) {
             currentQuest.goal.targetPlanets.Remove(remove);
             buildTargets.Remove(remove2);
             Destroy(remove2);
         }
-        
     }
-    
+
     private List<GameObject> minimapTargets;
 
     private void DisplayScanTarget() {
-        if (minimapTargets == null){
+        if (minimapTargets == null) {
             minimapTargets = new List<GameObject>();
-            foreach (GameObject planet in currentQuest.goal.targetPlanets){
+            foreach (GameObject planet in currentQuest.goal.targetPlanets) {
                 minimapTargets.Add(Instantiate(targetPrefab));
             }
         }
 
         GameObject remove = null;
         GameObject remove2 = null;
-        for (int i = 0; i < minimapTargets.Count; i++){
+        for (int i = 0; i < minimapTargets.Count; i++) {
             Vector3 planetPosition = currentQuest.goal.targetPlanets[i].transform.position;
 
             minimapTargets[i].transform.position = new Vector3(planetPosition.x, planetPosition.y, -10);
 
-            if (currentQuest.goal.targetPlanets[i].GetComponent<ScannablePlanet>().scanComplete){
+            if (currentQuest.goal.targetPlanets[i].GetComponent<ScannablePlanet>().scanComplete) {
                 remove = currentQuest.goal.targetPlanets[i];
                 remove2 = minimapTargets[i];
             }
         }
 
-        if (remove != null){
+        if (remove != null) {
             currentQuest.goal.targetPlanets.Remove(remove);
             minimapTargets.Remove(remove2);
             Destroy(remove2);
@@ -86,7 +87,7 @@ public class QuestPage : MonoBehaviour {
     }
 
     private void DisplayQuest(Quest quest) {
-        title.text = quest.goal.currentAmount + " / " + quest.goal.requiredAmount + " " + quest.title;
+        title.text = quest.title + ": " + Math.Round(quest.goal.currentAmount, 1) + " / " + quest.goal.requiredAmount + " ";
         description.text = quest.description;
     }
 }

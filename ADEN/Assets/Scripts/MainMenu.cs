@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public void StartGame() {
-        SceneManager.LoadScene("0Prologue");
+        SceneManager.LoadScene("Story");
     }
 
     public void StartTutorial() {
