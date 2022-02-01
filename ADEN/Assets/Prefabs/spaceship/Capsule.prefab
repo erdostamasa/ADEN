@@ -30302,7 +30302,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damageThreshold: 4
+  damageThreshold: 0
+  explosionParticles: {fileID: 3233232363349858859, guid: 0adb53285622f4b4ba8821faecf0fb11,
+    type: 3}
+  deathWaitDuration: 3
 --- !u!114 &1162881074182296008
 MonoBehaviour:
   m_ObjectHideFlags: 0

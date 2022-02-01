@@ -12,6 +12,7 @@ public class SeparateButton : MonoBehaviour {
     }
 
     private void Update() {
+        if (GameMaster.Instance.currentCapsule == null) return;
         if (GameMaster.Instance.currentCapsule.GetComponent<CapsuleController>().connected){
             btn.interactable = true;
         } else{

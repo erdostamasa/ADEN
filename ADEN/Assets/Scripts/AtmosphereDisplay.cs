@@ -11,6 +11,7 @@ public class AtmosphereDisplay : MonoBehaviour {
     [SerializeField] List<GameObject> visuals;
 
     void Update() {
+        if (gameMaster.currentCapsule == null) return;
         List<PlanetScript> planets = gameMaster.currentCapsule.GetComponent<GravityApplier>().planets;
         PlanetScript planet = null;
         if (planets.Count > 0){

@@ -13,6 +13,10 @@ public class GameMaster : MonoBehaviour {
         get { return _instance; }
     }
 
+
+    [SerializeField] GameObject explosionParticles;
+    [SerializeField] float deathWaitDuration;
+    
     public Slider mainPowerSlider;
     public Slider sidePowerSlider;
 
@@ -45,15 +49,20 @@ public class GameMaster : MonoBehaviour {
         }
 
         Application.targetFrameRate = 60;
+
+        EventManager.instance.onPlayerDied += () => { StartCoroutine(DestroyCapsule()); };
     }
 
     private void Update() {
-        if (currentCapsule != null) {
-            healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
-            if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
-                DestroyCapsule();
-            }
-        }
+        // if (currentCapsule != null) {
+        //     healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
+        //     if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
+        //         DestroyCapsule();
+        //     }
+        // }
+    }
+
+    void HandlePlayerDeath() {
     }
 
 
@@ -77,17 +86,22 @@ public class GameMaster : MonoBehaviour {
         GUI.SetActive(true);
     }
 
-    public void DamageCapsule(int dmg) {
-        currentCapsule.GetComponent<HealthManager>().Damage(dmg, 2);
-        healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
-        if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
-            DestroyCapsule();
-        }
-    }
+    // public void DamageCapsule(int dmg) {
+    //     currentCapsule.GetComponent<HealthManager>().Damage(dmg, 2);
+    //     healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
+    //     if (currentCapsule.GetComponent<HealthManager>().health <= 0) {
+    //         DestroyCapsule();
+    //     }
+    // }
 
-    public void DestroyCapsule() {
-        AudioManager.Instance.PlayExplosion(currentCapsule.transform.position, 1f);
+    public IEnumerator DestroyCapsule() {
+        AudioManager.Instance.PlayExplosion(transform.position, 1f);
+        GameObject particles = Instantiate(explosionParticles, currentCapsule.transform.position, explosionParticles.transform.rotation);
+        Destroy(particles, 3f);
         Destroy(currentCapsule);
+
+        yield return new WaitForSeconds(deathWaitDuration);
+        
         currentCapsule = null;
         Camera.main.GetComponent<CameraFollow>().target = null;
         deathGUI.SetActive(true);

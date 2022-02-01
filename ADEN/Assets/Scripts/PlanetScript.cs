@@ -98,7 +98,8 @@ public class PlanetScript : MonoBehaviour {
         if (deadly){
             CustomTag ct = other.gameObject.GetComponent<CustomTag>();
             if (other.gameObject.CompareTag("Player")){
-                GameMaster.Instance.DestroyCapsule();
+                //GameMaster.Instance.DestroyCapsule();
+                other.gameObject.GetComponent<HealthManager>().Damage(Int32.MaxValue, 1);
             }else if (ct != null && ct.HasTag("killable")){
                 Destroy(other.gameObject);
             }
