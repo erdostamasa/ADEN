@@ -14,6 +14,7 @@ public class HealthManager : MonoBehaviour {
 
 
     public void Damage(int damage, int cooldown) {
+        EventManager.instance.HealthChanged();
         canTakeDamage = false;
         health -= damage;
 

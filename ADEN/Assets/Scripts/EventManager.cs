@@ -18,4 +18,10 @@ public class EventManager : MonoBehaviour {
     public void PlayerDied() {
         onPlayerDied?.Invoke();
     }
+
+    public event Action onHealthChanged;
+    public void HealthChanged() {
+        onPlayerDied?.Invoke();
+    }
+
 }

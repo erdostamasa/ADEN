@@ -29,7 +29,7 @@ public class CapsuleController : MonoBehaviour {
     private ThrusterScript bll;
     private ThrusterScript bld;
 
-    public float displayConnectPointDistance = 2f;
+    float displayConnectPointDistance = 15f;
 
     public float thrusterPower = 1f;
     public float mainSpeed = 2f;

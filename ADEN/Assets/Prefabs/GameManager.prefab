@@ -43,6 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9853d11ad95484384ede01d47e029f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 3233232363349858859, guid: 0adb53285622f4b4ba8821faecf0fb11,
+    type: 3}
+  deathWaitDuration: 1
+  mainPowerSlider: {fileID: 0}
+  sidePowerSlider: {fileID: 0}
   dontspawn: 0
   mothership: {fileID: 0}
   spawnPoint: {fileID: 0}

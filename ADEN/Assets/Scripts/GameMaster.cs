@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour {
 
     [SerializeField] GameObject explosionParticles;
     [SerializeField] float deathWaitDuration;
-    
+
     public Slider mainPowerSlider;
     public Slider sidePowerSlider;
 
@@ -51,6 +51,9 @@ public class GameMaster : MonoBehaviour {
         Application.targetFrameRate = 60;
 
         EventManager.instance.onPlayerDied += () => { StartCoroutine(DestroyCapsule()); };
+        EventManager.instance.onHealthChanged += UpdateHealthBar;
+        
+        UpdateHealthBar();
     }
 
     private void Update() {
@@ -62,7 +65,8 @@ public class GameMaster : MonoBehaviour {
         // }
     }
 
-    void HandlePlayerDeath() {
+    void UpdateHealthBar() {
+        healthBar.value = currentCapsule.GetComponent<HealthManager>().health;
     }
 
 
@@ -94,6 +98,10 @@ public class GameMaster : MonoBehaviour {
     //     }
     // }
 
+    public void SelfDestructCapsule() {
+        currentCapsule.GetComponent<HealthManager>().Damage(Int32.MaxValue, 1);
+    }
+
     public IEnumerator DestroyCapsule() {
         AudioManager.Instance.PlayExplosion(transform.position, 1f);
         GameObject particles = Instantiate(explosionParticles, currentCapsule.transform.position, explosionParticles.transform.rotation);
@@ -101,7 +109,7 @@ public class GameMaster : MonoBehaviour {
         Destroy(currentCapsule);
 
         yield return new WaitForSeconds(deathWaitDuration);
-        
+
         currentCapsule = null;
         Camera.main.GetComponent<CameraFollow>().target = null;
         deathGUI.SetActive(true);
